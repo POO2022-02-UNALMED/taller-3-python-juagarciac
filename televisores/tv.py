@@ -6,7 +6,7 @@ class TV:
         self.__canal=1
         self.__volumen=1
         self.__precio=500
-        TV.numTV=+1
+        TV.numTV+=1
         self.__control=None
     def turnOn(self):
         if (self.__estado==False):
