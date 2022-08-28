@@ -55,5 +55,5 @@ class TV:
     def getNumTV(cls):
         return cls.numTV
     def setNumTV(cls,num):
-        cls.numTV=num
+        TV.numTV=num
 
