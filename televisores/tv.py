@@ -1,3 +1,6 @@
+from pickle import TRUE
+
+
 class TV:
     numTV=0
     def __init__(self,marca,boolean):
@@ -33,22 +36,22 @@ class TV:
     def setPrecio(self,precio):
         self.__precio=precio
     def setVolumen(self,volumen):
-        if(0<=volumen and volumen<=7):
+        if(0<=volumen and volumen<=7 and self.__estado==True):
             self.__volumen=volumen
     def setCanal(self,canal):
-        if(1<=canal and canal<=120 and self.__estado==False):
+        if(1<=canal and canal<=120 and self.__estado==True):
             self.__canal=canal
     def volumenUp(self):
-        if(0<=self.__volumen and self.__volumen<7 and self.__estado==False):
+        if(0<=self.__volumen and self.__volumen<7 and self.__estado==True):
             self.__volumen=self.__volumen+1
     def canalUp(self):
-        if(1<=self.__canal and self.__canal<120 and self.__estado==False):
+        if(1<=self.__canal and self.__canal<120 and self.__estado==True):
             self.__canal=self.__canal+1
     def volumenDown(self):
-        if(0<self.__volumen and self.__volumen<=7 and self.__estado==False):
+        if(0<self.__volumen and self.__volumen<=7 and self.__estado==True):
             self.__volumen=self.__volumen-1
     def canalDown(self):
-        if(1<self.__canal and self.__canal<=120 and self.__estado==False):
+        if(1<self.__canal and self.__canal<=120 and self.__estado==True):
             self.__canal=self.__canal-1
 
     @classmethod
